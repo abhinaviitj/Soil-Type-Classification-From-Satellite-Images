@@ -11,11 +11,11 @@ import matplotlib.pyplot as plt
 
 #program to split dataset randomly to test, train and validation datasets.
 
-data_dir='/workspace/storage/basedata/test/'
+data_dir='/workspace/storage/basedata/'
 data_dir = pathlib.Path(data_dir)
 AUTOTUNE = tf.data.experimental.AUTOTUNE
 image_count=280
-list_ds = tf.data.Dataset.list_files(str('/workspace/storage/basedata/all/*/*'), shuffle=False)
+list_ds = tf.data.Dataset.list_files(str('/workspace/storage/basedata/*/*'), shuffle=False)
 list_ds = list_ds.shuffle(image_count, reshuffle_each_iteration=False)
 
 class_names = np.array(sorted([item.name for item in data_dir.glob('*') if item.name != "LICENSE.txt"]))
