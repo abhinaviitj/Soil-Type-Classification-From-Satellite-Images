@@ -201,4 +201,3 @@ for i in range(n):
   if res[i]==y_test[i]:
     k=k+1
 print('accuracy=',k/n)
-print(3/0)
