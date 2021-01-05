@@ -15,7 +15,7 @@ import matplotlib.pyplot as plt
 
 
 
-data_dir='/workspace/storage/basedata/train/'
+data_dir='/workspace/storage/basedata/'
 def get_list(a):
 	cur_dir=os.path.join(data_dir,a)
 	filename = os.listdir(cur_dir)
