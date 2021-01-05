@@ -14,7 +14,7 @@ import matplotlib.pyplot as plt
 # Vegetation removal as image preprocessing
 
 
-data_dir='/workspace/storage/basedata/train/'
+data_dir='/workspace/storage/basedata/'
 def get_list(a):
 	cur_dir=os.path.join(data_dir,a)
 	filename = os.listdir(cur_dir)
@@ -117,13 +117,13 @@ for t in range(no_of_loops):
 			temp_img=temp_img/255
 			img_array=np.append(img_array,[temp_img],axis=0)
 
-			if filename[i][34]=='a':
+			if filename[i][28]=='a':
 				label.append(0)
-			elif filename[i][34]=='b':
+			elif filename[i][28]=='b':
 				label.append(1)
-			elif filename[i][34]=='d':
+			elif filename[i][28]=='d':
 				label.append(2)
-			elif filename[i][34]=='r':
+			elif filename[i][28]=='r':
 				label.append(3)    
 		return img_array,label
 
